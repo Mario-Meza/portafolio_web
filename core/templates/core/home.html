@@ -1,0 +1,56 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Home{% endblock %}
+{% block content %}
+    {%  load  static%}
+    <div class="technology-carousel">
+        <div class="technology-track">
+            <div class="technology-item"><img src="{% static 'core/img/python.svg' %}" alt="Python"></div>
+            <div class="technology-item"><img src="{% static 'core/img/django.svg' %}" alt="Django"></div>
+            <div class="technology-item"><img src="{% static 'core/img/flask.svg' %}" alt="Flask"></div>
+            <div class="technology-item"><img src="{% static 'core/img/azure.svg' %}" alt="JavaScript"></div>
+            <div class="technology-item"><img src="{% static 'core/img/docker.svg' %}" alt="HTML"></div>
+            <div class="technology-item"><img src="{% static 'core/img/html.svg' %}" alt="CSS"></div>
+            <div class="technology-item"><img src="{% static 'core/img/css.svg' %}" alt="SQL"></div>
+            <div class="technology-item"><img src="{% static 'core/img/postgresql.svg' %}" alt="Docker"></div>
+            <div class="technology-item"><img src="{% static 'core/img/git.svg' %}" alt="Kubernetes"></div>
+            <div class="technology-item"><img src="{% static 'core/img/github.svg' %}" alt="Git"></div>
+            <div class="technology-item"><img src="{% static 'core/img/postman.svg' %}" alt="Python"></div>
+        </div>
+    </div>
+    <div class="skills-section">
+        <div class="skill-item">Accessibility</div>
+        <div class="skill-item">Speaking</div>
+        <div class="skill-item">Mentoring</div>
+    </div>
+    <div class="container">
+        <div class="say-hello">
+            <h3>Hi there!</h3>
+        </div>
+    <div class="content-container">
+        <p>
+            Mi nombre es Mario Mesa Sosa, actualmente radico en el estado de Hidalgo
+            Soy un apasionado por la tecnologia, me gusta aprender sobre las nuevas
+            tecnologias y del desarrollo web. Actualmente con el tema de Inteligencia
+            Artifical Generativa me tomo el tiempo de explorar sobre las nuevas herramientas
+            que me ayudan a tener un mejor rendimiento y ahorrar tiempo durante el desarrollo
+            de poyectos en mi trabajo y en mi proyectos personles.</p>
+    </div>
+    <div class="content-work">
+        <p style="text-decoration-style: solid"></p>
+    </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const track = document.querySelector('.technology-track');
+            const items = Array.from(track.children);
+
+            const totalWidth = items.reduce((total, item) => {
+                return total + item.getBoundingClientRect().width;
+            }, 0);
+
+            track.style.width = `${totalWidth * 2}px`; // Doble del totalWidth para scroll infinito
+        });
+</script>
+{% endblock %}
+

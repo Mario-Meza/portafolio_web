@@ -1,0 +1,25 @@
+{% extends 'core/base.html' %}
+
+{% block title %}About{% endblock %}
+{% block content %}
+    {%  load  static%}
+    <!-- Contenido Principal -->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-4 offset-lg-1">
+          <img class="img-fluid avatar" src="{% static 'core/img/mario.png' %}" alt="">
+        </div>
+        <div class="col-lg-7 col-md-8">
+          <h2 class="section-heading">Mario Mesa Sosa</h2>
+          <p>
+              Mi nombre es Mario Mesa Sosa, actualmente radico en el estado de Hidalgo.
+              Soy un apasionado por la tecnologia, me gusta aprender sobre las nuevas tecnologias y del desarrollo web.
+              Actualmente con el tema de Inteligencia Artifical Generativa me tomo el tiempo de explorar sobre las nuevas
+              herramientas que me ayudan a tener un mejor rendimiento y ahorrar tiempo durante el desarrollo de poyectos
+              en mi trabajo y en mi proyectos personales.
+          </p>
+        </div>
+      </div>
+    </div>
+    <hr>
+{% endblock %}
