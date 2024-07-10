@@ -37,8 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'core',
     'portfolio.apps.PortfolioConfig',
-    'ckeditor',
-    'ckeditor_uploader',
+    'froala_editor',
 ]
 
 MIDDLEWARE = [
@@ -120,21 +119,10 @@ STATIC_URL = 'static/'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, "media/")
 CKEDITOR_UPLOAD_PATH = 'uploads/'
-CKEDITOR_CONFIGS = {
-    'default': {
-            'toolbar': 'full',
-            'width': 'auto',
-            'extraPlugins': ','.join([
-                'uploadimage',
-                'image2',
-                'codesnippet',
-            ]),
-            'codeSnippet_theme': 'monokai_sublime',
-            'filebrowserUploadUrl': '/ckeditor/upload/',  # URL para subir archivos
-            'filebrowserBrowseUrl': '/ckeditor/browse/',  # URL para explorar archivos
-    },
-}
-
+FROALA_EDITOR_PLUGINS = ('align', 'char_counter', 'code_beautifier' ,'code_view', 'colors', 'draggable', 'emoticons',
+          'entities', 'file', 'font_family', 'font_size', 'fullscreen', 'image_manager', 'image', 'inline_style',
+          'line_breaker', 'link', 'lists', 'paragraph_format', 'paragraph_style', 'quick_insert', 'quote', 'save', 'table',
+          'url', 'video')
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 

@@ -27,7 +27,7 @@ urlpatterns = [
     path('contact/', core_views.contact, name='contact'),
     path('admin/', admin.site.urls),
 
-    path('ckeditor/', include('ckeditor_uploader.urls')),
+    path('froala_editor/', include('froala_editor.urls')),
 ]
 
 if settings.DEBUG:

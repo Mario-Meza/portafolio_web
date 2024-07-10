@@ -1,11 +1,16 @@
 from django.db import models
-from ckeditor.fields import RichTextField
+from froala_editor.fields import FroalaField
 
 
 # Create your models here.
 class Project(models.Model):
     title = models.CharField(max_length=200, verbose_name='Titulo')
-    description = RichTextField(verbose_name='Descripción')
+    description = FroalaField(
+        plugins=(
+            'font_size', 'font_family', 'align',
+            'code_view', 'colors', 'draggable',
+            'emoticons', 'inline_style','lists', 'paragraph_format','quote', 'file', 'image_manager', 'image'),
+        theme='dark', verbose_name='Descripción')
     image = models.ImageField(verbose_name='Imagen', upload_to='projects', null=True, blank=True)
     link = models.URLField(null=True, blank=True)
     created = models.DateTimeField(auto_now_add=True, verbose_name='Fecha de creacion')

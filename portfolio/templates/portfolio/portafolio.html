@@ -10,23 +10,25 @@
 {% endblock %}
 
 {% block content %}
-    {% for project in projects%}
-        <!-- Proyecto -->
-        <div class="row project">
-        {% if project.image %}
-            <div class="col-lg-3 col-md-4 offset-lg-1">
-                <img class="img-fluid" src="{{ project.image.url }}" alt="">
-            </div>
-        {% else %}
-            <p>No hay ninguna imagen cargada</p>
-        {% endif %}
-            <div class="col-lg-7 col-md-8">
-                <h2 class="section-heading title">{{ project.title }}</h2>
-                <p>{{ project.description|safe }}</p>
-                {% if project.link %}
-                    <p><a href="{{ project.link }}">Más información</a></p>
+    <div class="container">
+        {% for project in projects %}
+            <!-- Proyecto -->
+            <div class="row project project-container p-3 mb-3">
+                {% if project.image %}
+                    <div class="col-lg-3 col-md-4 offset-lg-1">
+                        <img class="img-fluid" src="{{ project.image.url }}" alt="">
+                    </div>
+                {% else %}
+                    <p>No hay ninguna imagen cargada</p>
                 {% endif %}
+                <div class="col-lg-7 col-md-8">
+                    <h2 class="section-heading title">{{ project.title }}</h2>
+                    <p>{{ project.description|safe }}</p>
+                    {% if project.link %}
+                            <p><a class="btn btn-info btn-oval" href="{{ project.link }}">Más información</a></p>
+                    {% endif %}
+                </div>
             </div>
-        </div>
-    {% endfor %}
+        {% endfor %}
+    </div>
 {% endblock %}
