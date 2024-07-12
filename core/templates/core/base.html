@@ -16,15 +16,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
-
     {{ form.media }}
 </head>
+
 <body>
     <div class="container">
         <!-- Navegación -->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
             <div class="container">
-                <a class="navbar-brand" href="{% url 'home' %}">Mario Meza</a>
+                <a class="navbar-brand" href="{% url 'home' %}" style="color: #1d2124">Mario Meza</a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menú
                     <i class="fa fa-bars"></i>
@@ -32,16 +32,16 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'home' %}">Home</a>
+                            <a class="nav-link" href="{% url 'home' %}" style="color: #1d2124">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'about' %}">About me</a>
+                            <a class="nav-link" href="{% url 'about' %}" style="color: #1d2124">About me</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'portafolio' %}">Portafolio</a>
+                            <a class="nav-link" href="{% url 'portafolio' %}" style="color: #1d2124">Portafolio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'contact' %}">Contacto</a>
+                            <a class="nav-link" href="{% url 'contact' %}" style="color: #1d2124">Contacto</a>
                         </li>
                     </ul>
                 </div>
@@ -49,7 +49,10 @@
         </nav>
 
         <!-- Cabecera -->
-        <header class="masthead">
+        <header class="masthead" style="background-color: #fbe5ff;
+            opacity: 0.6;
+            background-image: radial-gradient(#000000 0.25px, #fbe5ff 0.25px);
+            background-size: 5px 5px;">
             <div class="overlay"></div>
             <div class="container">
                 <div class="row">

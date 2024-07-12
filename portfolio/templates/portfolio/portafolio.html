@@ -10,7 +10,6 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container">
         {% for project in projects %}
             <!-- Proyecto -->
             <div class="row project project-container p-3 mb-3">
@@ -29,6 +28,7 @@
                     {% endif %}
                 </div>
             </div>
+            <hr>
         {% endfor %}
-    </div>
+
 {% endblock %}
