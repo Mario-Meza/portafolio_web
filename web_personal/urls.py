@@ -16,15 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from core import views as core_views
-from portfolio import views as portfolio_views
+from core.views import home
 from django.conf import settings
 
 urlpatterns = [
-    path('', core_views.home, name='home'),
-    path('about/', core_views.about, name='about'),
-    path('portafolio/', portfolio_views.portafolio, name='portafolio'),
-    path('contact/', core_views.contact, name='contact'),
+    path('', home, name='home'),
     path('admin/', admin.site.urls),
 
     path('froala_editor/', include('froala_editor.urls')),

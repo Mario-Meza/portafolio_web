@@ -36,7 +36,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'core',
-    'portfolio.apps.PortfolioConfig',
     'froala_editor',
 ]
 
