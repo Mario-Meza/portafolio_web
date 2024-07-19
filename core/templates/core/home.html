@@ -90,7 +90,7 @@
         <div class="content-wrapper">
             <div class="container">
                 <div class="skills">
-                    SKILLS
+                    <h2 class="section-heading">SKILLS</h2>
                     <div class="technology-carousel">
                         <div class="technology-track">
                             <div class="technology-item"><img src="{% static 'core/img/flask.svg' %}" alt="Flask"></div>
@@ -108,64 +108,76 @@
                 </div>
             </div>
         </div>
-        <div class="skills-section">
-            <div class="skill-item">Backend
-                <ul class="skills-list">
-                    <li class="skill-list-li">Python</li>
-                    <li class="skill-list-li">Django</li>
-                    <li class="skill-list-li">Flask</li>
-                    <li class="skill-list-li">Docker</li>
-                    <li class="skill-list-li">PostgresSQL</li>
-                    <li class="skill-list-li">GIT</li>
-                </ul>
-            </div>
-
-        <div class="skill-item">Azure Cloud
-            <ul class="skills-list">
-                <li class="skill-list-li">App service</li>
-                <li class="skill-list-li">Storage accounts</li>
-                <li class="skill-list-li">Container registry</li>
-                <li class="skill-list-li">Azure database for PostgreSQL(Flexible server)</li>
-                <li class="skill-list-li">Azure Open AI</li>
-                <li class="skill-list-li">Azure AI services</li>
-            </ul>
-        </div>
-        <div class="skill-item">Frontend
-            <ul class="skills-list">
-                <li class="skill-list-li">HTML</li>
-                <li class="skill-list-li">CSS</li>
-                <li class="skill-list-li">Bootstrap</li>
-            </ul>
-        </div>
-    </div>
-    <div class="container hi-there">
-        {% block headers %}
-            <h1>Portafolio</h1>
-            <span class="subheading">Currículo</span>
-        {% endblock %}
-        {% for project in projects %}
-            <!-- Proyecto -->
-            <div class="row project project-container p-3 mb-3">
-                {% if project.image %}
-                    <div class="col-lg-3 col-md-4 offset-lg-1">
-                        <img class="img-fluid" src="{{ project.image.url }}" alt="">
-                    </div>
-                {% else %}
-                    <p>No hay ninguna imagen cargada</p>
-                {% endif %}
-                <div class="col-lg-7 col-md-8">
-                    <h2 class="section-heading title">{{ project.title }}</h2>
-                    <p>{{ project.description|safe }}</p>
-                    {% if project.link %}
-                            <p><a class="btn btn-info btn-oval" href="{{ project.link }}">Más información</a></p>
-                    {% endif %}
+        <div class="container">
+            <div class="row skills-section">
+                <div class="col-lg-4 col-md-6 mb-4 skill-item">
+                    <h4>Backend</h4>
+                    <ul class="skills-list">
+                        <li class="skill-list-li">Python</li>
+                        <li class="skill-list-li">Django</li>
+                        <li class="skill-list-li">Flask</li>
+                        <li class="skill-list-li">Docker</li>
+                        <li class="skill-list-li">PostgresSQL</li>
+                        <li class="skill-list-li">GIT</li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 skill-item">
+                    <h4>Azure Cloud</h4>
+                    <ul class="skills-list">
+                        <li class="skill-list-li">App service</li>
+                        <li class="skill-list-li">Storage accounts</li>
+                        <li class="skill-list-li">Container registry</li>
+                        <li class="skill-list-li">Azure database for PostgreSQL (Flexible server)</li>
+                        <li class="skill-list-li">Azure Open AI</li>
+                        <li class="skill-list-li">Azure AI services</li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 skill-item">
+                    <h4>Frontend</h4>
+                    <ul class="skills-list">
+                        <li class="skill-list-li">HTML</li>
+                        <li class="skill-list-li">CSS</li>
+                        <li class="skill-list-li">Bootstrap</li>
+                    </ul>
                 </div>
             </div>
-            <hr>
-        {% endfor %}
+        </div>
+
     </div>
-        <!-- Pié de página -->
-        <footer>
+    <br>
+    <div class="container hi-there">
+        {% block headers %}
+            <h2 class="section-heading">PROYECTOS</h2>
+        {% endblock %}
+        <div class="row">
+            {% for project in projects %}
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100 project-card">
+                        {% if project.image %}
+                            <img class="card-img-top" src="{{ project.image.url }}" alt="{{ project.title }}">
+                        {% else %}
+                            <img class="card-img-top" src="{% static 'core/img/default_project_image.jpg' %}" alt="Imagen predeterminada">
+                        {% endif %}
+                        <div class="card-body">
+                            <h4 class="card-title">{{ project.title }}</h4>
+                            <p class="card-text">{{ project.description|safe }}</p>
+                        </div>
+                        <div class="card-footer">
+                            {% if project.link %}
+                                <a href="{{ project.link }}" class="btn btn-primary">Github</a>
+                                <a href="{{ project.link }}" class="btn btn-primary">visit</a>
+                            {% endif %}
+                            {% if project.github %}
+                                <a href="{{ project.github }}" class="btn btn-secondary">Github</a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    <!-- Pié de página -->
+    <footer>
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 col-md-10 mx-auto">
@@ -195,12 +207,11 @@
                                 </a>
                             </li>
                         </ul>
-                        <p class="copyright text-muted">Copyright &copy; 2018 · Juan Pérez (Ingeniero Industrial)</p>
+                        <p class="copyright text-muted">Copyright &copy; 2024 · Mario Meza Sosa (Desarrollador web)</p>
                     </div>
                 </div>
             </div>
         </footer>
-    </div>
     <!-- Bootstrap y Javascripts -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {

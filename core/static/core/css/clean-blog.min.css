@@ -43,8 +43,9 @@ blockquote{
     font-size:35px;
     font-weight:700;
     margin-top:30px;
-    color: #117a8b;
+    color: rgba(125,62,81,0.72);
 }
+
 .caption{
     font-size:14px;
     font-style:italic;
@@ -171,10 +172,14 @@ header.masthead{
     border-radius: 1%;
 }
 .content-wrapper {
+    font-family:
+            Apercu, -apple-system,
+            BlinkMacSystemFont, "Segoe UI",
+            Roboto, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
     width: 100%;
     max-width: 1200px;
     padding: 20px;
-
+    text-align: justify;
     margin-top: 20px;
     background-color: #fff4e5;
 }
@@ -198,19 +203,28 @@ header.masthead
     padding: 200px 0 150px;
     color: #fff;
 }
-.presented p{
+
+.presented{
     text-align: center;
-    font-size: 35px;
+    font-size: 28px;
     font-family: "Mada", sans-serif;
     color: black;
     font-weight: bold;
     margin: 0;
     background-color: #fbe5ff;
+    border: 4px solid #2e3133;
+}
+
+.skills {
+    font-weight: bolder;
+    font-size: 35px;
+    font-family: "Work Sans", sans-serif;
+
 }
 
 .carer {
     opacity: 1;
-    font-size: 35px;
+    font-size: 28px;
     font-weight: bolder;
     transition: opacity 0.5s ease-in-out;
 }
@@ -341,7 +355,18 @@ header.masthead
         font-size:36px
     }
 }
-.floating-label-form-group{font-size:14px;position:relative;margin-bottom:0;padding-bottom:.5em;border-bottom:1px solid #dee2e6}.floating-label-form-group input,.floating-label-form-group textarea{font-size:1.5em;position:relative;z-index:1;padding:0;resize:none;border:none;border-radius:0;background:0 0;box-shadow:none!important;font-family:Lora,'Times New Roman',serif}.floating-label-form-group input::-webkit-input-placeholder,.floating-label-form-group textarea::-webkit-input-placeholder{color:#868e96;font-family:Lora,'Times New Roman',serif}.floating-label-form-group label{font-size:.85em;line-height:1.764705882em;position:relative;z-index:0;top:2em;display:block;margin:0;-webkit-transition:top .3s ease,opacity .3s ease;-moz-transition:top .3s ease,opacity .3s ease;-ms-transition:top .3s ease,opacity .3s ease;transition:top .3s ease,opacity .3s ease;vertical-align:middle;vertical-align:baseline;opacity:0}.floating-label-form-group .help-block{margin:15px 0}.floating-label-form-group-with-value label{top:0;opacity:1}.floating-label-form-group-with-focus label{color:#0085a1}form .form-group:first-child .floating-label-form-group{border-top:1px solid #dee2e6}hr{margin-top:4.5rem !important;margin-bottom: 3.5rem !important;}footer{padding:10px 0 65px}footer .list-inline{margin:0;padding:0}footer .copyright{font-size:14px;margin-bottom:0;text-align:center}.btn{font-size:14px;font-weight:800;padding:15px 25px;letter-spacing:1px;text-transform:uppercase;border-radius:0;font-family:'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif}.btn-primary{background-color:#0085a1;border-color:#0085a1}.btn-primary:active,.btn-primary:focus,.btn-primary:hover{color:#fff;background-color:#00657b!important;border-color:#00657b!important}
+.floating-label-form-group{font-size:14px;position:relative;margin-bottom:0;padding-bottom:.5em;border-bottom:1px solid #dee2e6}.floating-label-form-group input,.floating-label-form-group textarea{font-size:1.5em;position:relative;z-index:1;padding:0;resize:none;border:none;border-radius:0;background:0 0;box-shadow:none!important;font-family:Lora,'Times New Roman',serif}.floating-label-form-group input::-webkit-input-placeholder,.floating-label-form-group textarea::-webkit-input-placeholder{color:#868e96;font-family:Lora,'Times New Roman',serif}.floating-label-form-group label{font-size:.85em;line-height:1.764705882em;position:relative;z-index:0;top:2em;display:block;margin:0;-webkit-transition:top .3s ease,opacity .3s ease;-moz-transition:top .3s ease,opacity .3s ease;-ms-transition:top .3s ease,opacity .3s ease;transition:top .3s ease,opacity .3s ease;vertical-align:middle;vertical-align:baseline;opacity:0}.floating-label-form-group .help-block{margin:15px 0}.floating-label-form-group-with-value label{top:0;opacity:1}.floating-label-form-group-with-focus label{color:#0085a1}form .form-group:first-child .floating-label-form-group{border-top:1px solid #dee2e6}hr{margin-top:4.5rem !important;margin-bottom: 3.5rem !important;}footer{padding:10px 0 65px}footer .list-inline{margin:0;padding:0}footer .copyright{font-size:14px;margin-bottom:0;text-align:center}.btn{font-size:14px;font-weight:800;padding:15px 25px;letter-spacing:1px;text-transform:uppercase;border-radius:0;font-family:'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif}
+.btn-primary{
+    background-color:#7d3e51;
+    border-color:#fff6f6;
+}
+.btn-primary:active,
+.btn-primary:focus,
+.btn-primary:hover{
+    color:#fff;
+    background-color: #d44aa1!important;
+    border-color:#fff6f6
+}
 
 .project-container {
     color: #171a1d;
@@ -401,21 +426,17 @@ header.masthead
     }
 }
 .skill-list-li{
-    color:#1d2124;
-    font-weight: normal;
-    font-size: 0.8em;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 /* Skills Section */
 .skills-section {
     position: relative; /* Asegura que los pseudoelementos se posicionen correctamente */
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    border-radius: 40px;
+    display: grid | inline-grid;
+    justify-content: space-between;
     padding: 20px;
     margin-top: 20px; /* Separación del contenido anterior */
-    color: #0c5460;
     z-index: 1;
 }
 .skills-section::before {
@@ -427,16 +448,19 @@ header.masthead
     bottom: 0;
     background-color: #fbe5ff;
     opacity: 0.6;
+    margin-top: 20px;
     background-image: radial-gradient(#000000 0.25px, #fbe5ff 0.25px);
     background-size: 5px 5px;
     z-index: -1; /* Asegura que el fondo esté detrás del contenido */
 }
-.skill-item {
+.skill-item h4{
     font-weight: bold;
-    font-size: 1.2em;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
     text-align: justify;
     opacity: 1; /* Asegura que el texto esté completamente visible */
     z-index: 1; /* Asegura que el texto esté por encima del fondo */
+
 }
 
 .say-hello h3{
@@ -446,4 +470,9 @@ header.masthead
 }
 .hi-there{
     background-color: #fff4e5;
+}
+
+.card-footer{
+    align-content: center;
+    text-align: center;
 }
