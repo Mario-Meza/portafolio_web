@@ -1,0 +1,14 @@
+@import "tailwindcss";
+input::placeholder,
+textarea::placeholder {
+    font-size: 15px;
+    padding: 9px;
+}
+form{
+    margin: 25px;
+}
+button{
+    margin: 20px 0;
+    height: 30px;
+
+}

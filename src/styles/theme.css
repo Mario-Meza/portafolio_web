@@ -1,0 +1,45 @@
+/* styles/theme.css */
+
+/* Variables CSS para el tema claro (default) */
+:root {
+    --background-primary: #ffffff;
+    --background-secondary: #f5f5f5;
+    --text-primary: #333333;
+    --text-secondary: #666666;
+    --accent-color: #007bff;
+    --border-color: #e0e0e0;
+}
+
+/* Variables CSS para el tema oscuro */
+.dark-theme {
+    --background-primary: #1a1a1a;
+    --background-secondary: #2d2d2d;
+    --text-primary: #ffffff;
+    --text-secondary: #cccccc;
+    --accent-color: #4dabf7;
+    --border-color: #404040;
+}
+
+/* Estilos base que utilizan las variables */
+.app {
+    background-color: var(--background-primary);
+    color: var(--text-primary);
+    transition: all 0.3s ease;
+}
+
+/* Estilos para el botón de cambio de tema */
+.theme-toggle {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.5rem;
+    border-radius: 50%;
+    border: none;
+    background: var(--background-secondary);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1);
+}

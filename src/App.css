@@ -1,0 +1,13 @@
+@import "tailwindcss";
+/* App.css */
+@tailwind utilities;
+
+/* styles/base.css */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Estilos que no se pueden lograr con Tailwind */
+.custom-transition {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}

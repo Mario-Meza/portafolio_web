@@ -1,0 +1,142 @@
+@import "tailwindcss";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.header {
+    /*border: 2px solid #535bf2;*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    z-index: 1000;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.section{
+    /*border: 1px solid rgba(168, 168, 168, 0.45);*/
+    min-height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra verticalmente el contenido */
+}
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+.logo{
+    width: 32px;
+    height: 32px;
+    background-color: #1a1a1a;
+}
+.brand-name {
+    font-size: 1.25rem;
+    color: var(--color-text);
+}
+/* Primero, estilo para el contenedor ul */
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+/* Luego, estilo específico para los enlaces dentro de nav-links */
+.nav-links a{
+    text-decoration: none;
+
+    transition: color 0.3s ease;
+    position: relative; /* Para la línea inferior */
+    padding-bottom: 5px;
+}
+.nav-links a.active {
+    color: #535bf2;
+}
+.nav-links a:hover {
+    color: #646cff;
+    transition: 0.2s;
+}
+.nav-links::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #535bf2;
+    transition: width 0.3s ease;
+}
+.nav-links a.active::after {
+    width: 100%; /* La línea aparece cuando está activo */
+}
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.hero-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 2rem;
+
+}
+.hero-title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--color-text);
+}
+.hero-susbtitle {
+    font-size: 1.2rem;
+    color: #a1a1a1;
+}
+
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+    .hero-title {
+        font-size: 2rem;
+    }
+    .section {
+        padding-top: 140px; /* Aumentado para móviles debido al header más alto */
+    }
+}
+@media (min-width: 378px) {
+    .nav-container{
+        flex-direction: row;
+        gap: 1rem;
+    }
+}
+@media (min-width: 469px) {
+    .nav-container{
+        flex-direction: row;
+        gap: 1rem;
+    }
+}
+@media (min-width: 300px) {
+    .nav-container{
+        flex-direction: row;
+        gap: 1rem;
+    }
+}
+
