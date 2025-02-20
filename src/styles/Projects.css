@@ -1,47 +1,97 @@
 @import "tailwindcss";
-:root {
-    --color-text: #ffffff;
-}
-
 html {
     scroll-behavior: smooth;
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: system-ui, -apple-system, sans-serif;
-}
-.section {
-    background: radial-gradient(circle at top center,#0f151a 30%,#000 80%);
-    padding: 50px;
-}
-
-.container {
-    display: grid;
-    text-align: justify;
+/* Articles.css */
+.testimonial-section {
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 0 auto;  /* Cambiado de 40px auto a 0 auto */
+    padding: 0 20px; /* Modificado para mantener padding horizontal */
 }
-.flex-item{
-    display: flex;
+
+.section-title {
     text-align: center;
-    gap: 0.5rem;
-}
-.flex-item span{
-    font-size: 23px;
-    font-weight: bold;
-}
-@media (min-width: 768px){
-    .grid{
-        grid-template-columns: repeat(3, 1fr);
-    }
+    margin-bottom: 2rem;
+    font-size: 2rem;
+
 }
 
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px 0; /* Cambiado a solo padding vertical */
+}
 
-.section h2,h3{
-    font-size: 1.5rem;
+.testimonial-card {
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+}
+
+.testimonial-header {
+    display: flex;
+    align-items: center;
     margin-bottom: 20px;
-    color: var(--color-text);
+}
+
+.profile-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+.profile-info {
+    flex-grow: 1;
+}
+
+.profile-name {
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.profile-role {
+    font-size: 0.9rem;
+}
+
+.quote-icon {
+    color: #4a90e2;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.testimonial-text {
+    line-height: 1.6;
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.project-name {
+    color: #4a90e2;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .testimonial-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .testimonial-section {
+        padding: 0 15px;
+    }
+
+    .section-title {
+        font-size: 1.75rem;
+        margin-bottom: 1.5rem;
+    }
 }

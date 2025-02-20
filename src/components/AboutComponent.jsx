@@ -1,6 +1,7 @@
-import React from 'react';
-import "../styles/About.css"
 import profileImage from '../public/images/me.jpg';
+import "../styles/About.css"
+import React from 'react';
+
 
 const TechList = ({ items }) => (
     <div className="grid grid-cols-2 gap-x-4 gap-y-2 mt-4">
@@ -92,7 +93,7 @@ export const AboutComponent = () => {
                                 <div className="relative rounded overflow-hidden bg-emerald-400/20 filter">
                                     <img src={profileImage} alt="Profile" className="w-full h-full object-cover transition-all duration-300" />
                                 </div>
-                                <div className="absolute inset-0 bg-emerald-400/30 mix-blend-multiply group-hover:opacity-0 transition-opacity duration-300"></div>
+                                <div className="absolute inset-0 bg-emerald-400/40 mix-blend-multiply group-hover:opacity-0 transition-opacity duration-300"></div>
                             </div>
                         </div>
                     </div>

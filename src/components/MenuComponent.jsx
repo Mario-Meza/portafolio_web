@@ -1,6 +1,6 @@
 import {useActiveSection} from "../hooks/useActiveSection";
 import { useState } from "react";
-import "../styles/HomePage.css"
+import "../styles/Menu.css"
 
 export const MenuComponent = () => {
     const {activeSection} = useActiveSection();

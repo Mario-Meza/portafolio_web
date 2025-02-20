@@ -1,0 +1,47 @@
+@import "tailwindcss";
+:root {
+    --color-text: #ffffff;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+.section {
+    background: radial-gradient(circle at top center,#0f151a 30%,#000 80%);
+    padding: 50px;
+}
+
+.container {
+    display: grid;
+    text-align: justify;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.flex-item{
+    display: flex;
+    text-align: center;
+    gap: 0.5rem;
+}
+.flex-item span{
+    font-size: 23px;
+    font-weight: bold;
+}
+@media (min-width: 768px){
+    .grid{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+.section h2,h3{
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: var(--color-text);
+}

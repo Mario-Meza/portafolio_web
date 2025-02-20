@@ -1,16 +1,9 @@
 import { MenuComponent } from "./MenuComponent.jsx"
+import { JobsComponent } from "./JobsComponent.jsx"
 import { ProjectsComponent } from "./ProjectsComponent.jsx"
-import { ArticlesComponent } from "./ArticlesComponent.jsx"
 import { ContactComponent } from "./ContactComponent.jsx"
 import { FooterComponent } from "./FooterComponent.jsx"
 import { AboutComponent } from "./AboutComponent.jsx"
-
-
-
-
-
-
-
 
 export const IndexComponent = () => {
   return (
@@ -19,8 +12,8 @@ export const IndexComponent = () => {
       <main>
         <MenuComponent />
         <AboutComponent />
+        <JobsComponent />
         <ProjectsComponent />
-        <ArticlesComponent />
         <ContactComponent />
         <FooterComponent />
       </main>
