@@ -16,7 +16,9 @@ const TestimonialCard = ({review}) => (
         </div>
         <div className="quote-icon">"</div>
         <p className="testimonial-text">{review.content}</p>
-        <p className="project-name">Project: {review.project}</p>
+        <a href={"#"}>
+            <p className="project-name">Project: {review.project}</p>
+        </a>
     </div>
 );
 
@@ -29,7 +31,7 @@ export const ProjectsComponent = () => {
     return (
         <section id="articles" className="section">
             <div className="testimonial-section">
-                <h2 className="section-title">Reviews from my teachers</h2>
+                <h2 className="section-title">Some Things I’ve Built</h2>
                 <div className="testimonial-grid">
                     { reviews.map((review, index) => (
                         <TestimonialCard key={index} review={review} />

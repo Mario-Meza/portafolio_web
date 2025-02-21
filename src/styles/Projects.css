@@ -14,6 +14,7 @@ html {
     text-align: center;
     margin-bottom: 2rem;
     font-size: 2rem;
+    font-weight: bold;
 
 }
 
@@ -22,19 +23,20 @@ html {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
     padding: 20px 0; /* Cambiado a solo padding vertical */
+    color: white;
 }
 
 .testimonial-card {
-    border-radius: 12px;
+    /*border-radius: 12px;*/
     padding: 25px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    /*box-shadow: 0 4px 15px rgb(40, 40, 40);*/
     transition: transform 0.3s ease;
+    background: radial-gradient(circle at center,#0f151a 30%,#000 80%);
 }
 
 .testimonial-card:hover {
     transform: translateY(-5px);
 }
-
 .testimonial-header {
     display: flex;
     align-items: center;
@@ -56,14 +58,16 @@ html {
 .profile-name {
     font-weight: 600;
     margin-bottom: 5px;
+
 }
 
 .profile-role {
     font-size: 0.9rem;
+    color: #a57dff;
 }
 
 .quote-icon {
-    color: #4a90e2;
+    color: #a57dff;
     font-size: 1.5rem;
     margin-bottom: 15px;
 }
@@ -75,7 +79,7 @@ html {
 }
 
 .project-name {
-    color: #4a90e2;
+    color: #a57dff;
     font-size: 0.9rem;
     font-weight: 500;
 }
