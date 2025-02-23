@@ -1,5 +1,4 @@
 import { useReviews } from '../hooks/useReviews';
-import "../styles/Projects.css"
 
 const TestimonialCard = ({review}) => (
     <div className="testimonial-card">
@@ -29,7 +28,7 @@ export const ProjectsComponent = () => {
     if(error) return  <div>Error: {error}</div>
 
     return (
-        <section id="articles" className="section">
+        <section id="work" className="section-projects">
             <div className="testimonial-section">
                 <h2 className="section-title">Some Things I’ve Built</h2>
                 <div className="testimonial-grid">

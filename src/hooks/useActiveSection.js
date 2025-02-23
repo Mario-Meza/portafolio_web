@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 export const useActiveSection = () => {
-    const [activeSection, setActiveSection] = useState('home'); // Inicializamos con 'home'
+    const [activeSection, setActiveSection] = useState('about'); // Inicializamos con 'home'
 
     useEffect(() => {
         const handleScroll = () => {

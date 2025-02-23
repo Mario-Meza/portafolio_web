@@ -13,21 +13,26 @@ html {
     box-sizing: border-box;
     font-family: system-ui, -apple-system, sans-serif;
 }
-.section {
-    background: radial-gradient(circle at top center,#0f151a 30%,#000 80%);
-    padding: 50px;
+.section-jobs {
+    display: grid;
+    justify-content: center;
+    background: #0C1115FF;
+
 }
 
 .container {
-    display: grid;
     text-align: justify;
     max-width: 1200px;
     margin: 0 auto;
 }
 .flex-item{
-    display: flex;
-    text-align: center;
-    gap: 0.5rem;
+    display: grid;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+.flex-item h2 {
+    font-size: 2rem;
+    padding: 20px;
 }
 .flex-item span{
     font-size: 23px;

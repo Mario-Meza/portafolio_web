@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import "../styles/Contact.css"
 
 export const ContactComponent = () => {
     const [formData, setFormData] = useState({
@@ -23,7 +22,7 @@ export const ContactComponent = () => {
     };
 
     return (
-        <section id="contact" className="section min-h-screen flex items-center justify-center mb-20">
+        <section id="contact" className="section-contact">
             <div className="max-w-2xl w-full mx-auto px-6">
                 <h2 className="text-2xl mb-6 text-[#4b4b4b] text-center">Send me</h2>
                 <p className="text-[#a1a1a1] mb-8 text-center">

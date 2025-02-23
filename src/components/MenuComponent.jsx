@@ -1,14 +1,13 @@
 import {useActiveSection} from "../hooks/useActiveSection";
 import { useState } from "react";
-import "../styles/Menu.css"
 
 export const MenuComponent = () => {
     const {activeSection} = useActiveSection();
     const [codeText, setCodeText] = useState('("Hello, World!")');
     const navLinks = [
-        { name: 'Home', path: '#home'},
-        { name: 'Projects', path: '#projects'},
-        { name: 'Articles', path: '#articles'},
+        { name: 'About', path: '#about'},
+        { name: 'Experience', path: '#experience'},
+        { name: 'Work', path: '#work'},
         { name: 'Contact', path: '#contact'}
     ];
     const handleCodeChange = (event) => {

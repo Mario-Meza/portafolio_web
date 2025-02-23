@@ -1,9 +1,8 @@
-import "../styles/Footer.css"
 
 export const FooterComponent = () => {
     return (
         <>
-        <section id="footer" className="section">
+        <section id="footer" className="section-footer">
             <footer className="footer">
                 <div className="footer-container">
                     {/* Social Links */}

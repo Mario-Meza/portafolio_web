@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "../styles/Jobs.css"
+
 
 export const JobsComponent = () => {
     const [activeCompany, setActiveCompany] = useState(0);
@@ -57,9 +57,7 @@ export const JobsComponent = () => {
         }
     ];
     return (
-        <section id="projects" className="section">
-
-            <div className="container">
+        <section id="experience" className="section-jobs">
                 <div className="flex-item">
                     <h2 className="text-4xl text-slate-200 font-semibold">Where I&apos;ve Worked</h2>
                 </div>
@@ -106,7 +104,6 @@ export const JobsComponent = () => {
                         </div>
                     </div>
 
-            </div>
         </section>
     )
 }

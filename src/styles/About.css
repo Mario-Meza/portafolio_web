@@ -1,27 +1,12 @@
-@import "tailwindcss";
-:root {
-    --color-text: #ffffff;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: system-ui, -apple-system, sans-serif;
-}
-
-.section{
+.section-about {
     display: grid;
-    background: radial-gradient(circle at top center,#0f151a 30%,#000 80%);
-
+    justify-content: center;
+    background: #0C1115FF;
+    padding: 50px;
 }
 
-.profile{
-
-
-
+.section-about h2 {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 1rem;
 }

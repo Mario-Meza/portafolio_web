@@ -2,20 +2,26 @@
 html {
     scroll-behavior: smooth;
 }
+.section-projects {
+    display: grid;
+    justify-content: center;
+    background: #0C1115FF;
+    padding: 20px;
+}
 
 /* Articles.css */
 .testimonial-section {
     max-width: 1200px;
     margin: 0 auto;  /* Cambiado de 40px auto a 0 auto */
-    padding: 0 20px; /* Modificado para mantener padding horizontal */
+    /* padding: 0 20px; Modificado para mantener padding horizontal */
 }
 
 .section-title {
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     font-size: 2rem;
     font-weight: bold;
-
+    color: white;
 }
 
 .testimonial-grid {
@@ -30,8 +36,9 @@ html {
     /*border-radius: 12px;*/
     padding: 25px;
     /*box-shadow: 0 4px 15px rgb(40, 40, 40);*/
+    border: rgba(85, 234, 163, 0.37) 2px solid;
     transition: transform 0.3s ease;
-    background: radial-gradient(circle at center,#0f151a 30%,#000 80%);
+
 }
 
 .testimonial-card:hover {
@@ -73,9 +80,12 @@ html {
 }
 
 .testimonial-text {
+    display: grid;
+    text-align: center;
     line-height: 1.6;
     font-size: 1rem;
     margin-bottom: 15px;
+
 }
 
 .project-name {

@@ -5,17 +5,12 @@
     padding: 0;
 }
 
-.footer {
-    width: 100vw;
-    position: relative;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
-    background: white;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+.section-footer {
+    display: grid;
+    justify-content: center;
     color: var(--color-text);
-    padding: 3rem 0;
+    background: radial-gradient(circle,#0f151a 30%,#000 80%);
+    padding-top: 30px;
 }
 
 .footer-container {
