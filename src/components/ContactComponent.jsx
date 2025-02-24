@@ -1,6 +1,8 @@
 import { useState } from 'react';
 
 export const ContactComponent = () => {
+    const [errors, setErrors] = useState({});
+    const [submitStatus, setSubmitStatus] = useState(null);
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -16,10 +18,32 @@ export const ContactComponent = () => {
         }));
     };
 
+    const validate = () => {
+        const newErrors = {};
+        if (!formData.name.trim()) newErrors.name = 'El nombre es requerido';
+        if (!formData.email.trim()) {
+            newErrors.email = 'El email es requerido';
+        } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+            newErrors.email = 'Email inválido';
+        }
+        if (!formData.subject.trim()) newErrors.subject = 'El asunto es requerido';
+        if (!formData.message.trim()) newErrors.message = 'El mensaje es requerido';
+
+        setErrors(newErrors);
+        return Object.keys(newErrors).length === 0;
+    };
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log('Formulario enviado:', formData);
+        if (validate()) {
+            setSubmitStatus('sending');
+
+            setTimeout(() => {
+                setSubmitStatus('success');
+                setFormData({ name: '', email: '', subject: '', message: '' });
+                }, 1500);
+        }
     };
+
 
     return (
         <section id="contact" className="section-contact">
@@ -31,55 +55,90 @@ export const ContactComponent = () => {
 
                 <form onSubmit={handleSubmit} className="space-y-6">
                     <div>
+                        <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-1">
+                            Nombre
+                        </label>
                         <input
                             type="text"
+                            id="name"
                             name="name"
                             placeholder="name"
                             value={formData.name}
                             onChange={handleChange}
-                            className="py-3 px-4 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
+                            className={`w-full px-4 py-3 rounded-md bg-gray-700 border ${
+                                errors.name ? 'border-red-500' : 'border-gray-600'
+                            } focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition`}
                             required
                         />
                     </div>
 
                     <div>
+                        <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-1">
+                            Email
+                        </label>
                         <input
                             type="email"
                             name="email"
                             placeholder="email"
                             value={formData.email}
                             onChange={handleChange}
-                            className="py-3 px-4 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
+                            className={`w-full px-4 py-3 rounded-md bg-gray-700 border ${
+                                errors.name ? 'border-red-500' : 'border-gray-600'
+                            } focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition`}
                             required
                         />
                     </div>
 
                     <div>
+                        <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-1">
+                            Subject
+                        </label>
                         <input
                             type="text"
                             name="subject"
                             placeholder="subject"
                             value={formData.subject}
                             onChange={handleChange}
-                            className="py-3 px-4 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
+                            className={`w-full px-4 py-3 rounded-md bg-gray-700 border ${
+                                errors.name ? 'border-red-500' : 'border-gray-600'
+                            } focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition`}
                             required
                         />
                     </div>
 
                     <div>
+                        <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-1">
+                            Message
+                        </label>
                         <textarea
                             name="message"
                             placeholder="message"
                             value={formData.message}
                             onChange={handleChange}
-                            className="block w-full shadow-sm focus:ring-indigo-500   rounded-md"
+                            className={`w-full px-4 py-3 rounded-md bg-gray-700 border ${
+                                errors.name ? 'border-red-500' : 'border-gray-600'
+                            } focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition`}
                             required
                         />
                     </div>
 
-                    <button type="submit" className="w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors duration-300">
-                        Enviar mensaje
-                    </button>
+              <button
+                  type="submit"
+                  disabled={submitStatus === 'sending'}
+                  className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-medium py-3 px-4 rounded-md hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-cyan-600 focus:ring-opacity-50 transition transform hover:-translate-y-1 shadow-lg disabled:opacity-70 flex justify-center items-center"
+                >
+                  {submitStatus === 'sending' ? (
+                    <>
+                      <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                      </svg>
+                      Enviando...
+                    </>
+                  ) : (
+                    'Enviar mensaje'
+                  )}
+                </button>
                 </form>
             </div>
         </section>

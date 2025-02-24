@@ -1,14 +1,22 @@
 @import "tailwindcss";
-
+:root{
+    --tw-bg-opacity: 1;
+    --text-white-contact: #ffffff;
+}
 input::placeholder,
 textarea::placeholder {
     font-size: 15px;
     padding: 9px;
+    color: white;
+
 }
 
 form{
-    margin: 25px;
-    color: white;
+    display: grid;
+    gap: 10px;
+    margin: 5px;
+    color: var(--text-white-contact);
+
 }
 button{
     margin: 20px 0;
@@ -18,11 +26,14 @@ button{
 .section-contact {
     display: grid;
     justify-content: center;
-    background: #0C1115FF;
+    background-color: rgb(22 24 29 / var(--tw-bg-opacity));
     padding-top: 1rem;
+
 }
+
+
 .section-contact h2 {
-    color: white;
+    color: var(--text-white-contact);
     font-size: 25px;
     font-weight: bold;
     margin-bottom: 1rem;

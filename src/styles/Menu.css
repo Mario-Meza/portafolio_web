@@ -1,4 +1,8 @@
 @import "tailwindcss";
+:root{
+    --tw-bg-opacity: 1;
+    --text-white-menu: #ffffff;
+}
 * {
     margin: 0;
     padding: 0;
@@ -19,7 +23,7 @@ html {
     top: 0;
     left: 0;
     width: 100%;
-    background: radial-gradient(circle at top center, #0f151a 30%,#000 80%);
+    background: rgb(35 39 47 / var(--tw-bg-opacity));
     z-index: 1000;
     padding: 1rem 2rem;
 }
@@ -62,14 +66,11 @@ html {
 /* Luego, estilo específico para los enlaces dentro de nav-links */
 .nav-links a{
     text-decoration: none;
-
     transition: color 0.3s ease;
     position: relative; /* Para la línea inferior */
     padding-bottom: 5px;
 }
-.nav-links a.active {
 
-}
 .nav-links a:hover {
     transition: 0.2s;
 }
@@ -94,28 +95,28 @@ html {
     max-width: 800px;
     margin: 0 auto;
     padding: 0 2rem;
-    color: white;
+    color: var(--text-white-menu);
 
 }
 .hero-container{
     margin: 8px auto;
 }
 .hero-return{
-    color: #d08cff;
+    color: #ffffff;
     font-weight: bold;
     text-align: start;
-    text-shadow: 0 0 10px rgb(208, 140, 255), 0 0 20px rgb(208, 140, 255), 0 0 40px rgb(81, 38, 127), 0 0 80px rgb(81, 38, 127), 0 0 90px rgba(38,104,127,1), 0 0 100px rgba(38,104,127,1), 0 0 140px rgba(38,104,127,1)
+    text-shadow: 0 0 10px rgb(255, 255, 255), 0 0 20px rgb(255, 255, 255), 0 0 40px rgb(255, 255, 255), 0 0 80px rgb(255, 255, 255), 0 0 90px rgba(38,104,127,1), 0 0 100px rgba(38,104,127,1), 0 0 140px rgba(38,104,127,1)
 }
 .hero-hello-world{
     color: #25ff87;
-        text-shadow: 0 0 10px rgb(118, 255, 140), 0 0 20px rgb(118, 255, 140), 0 0 40px rgb(24, 84, 34), 0 0 80px rgb(24, 84, 34), 0 0 90px rgba(38,104,127,1), 0 0 100px rgba(38,104,127,1), 0 0 140px rgba(38,104,127,1)
+    text-shadow: 0 0 10px rgb(118, 255, 140), 0 0 20px rgb(118, 255, 140), 0 0 40px rgb(24, 84, 34), 0 0 80px rgb(24, 84, 34), 0 0 90px rgba(38,104,127,1), 0 0 100px rgba(38,104,127,1), 0 0 140px rgba(38,104,127,1)
 }
 
 .hero-title {
     font-size: 3.5rem;
     margin-bottom: 1rem;
     font-family: "Apple Symbols", serif;
-    color: white;
+    color: var(--text-white-menu);
 }
 
 @media (max-width: 768px) {

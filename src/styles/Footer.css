@@ -1,4 +1,7 @@
-/* Footer.css */
+:root {
+    --tw-bg-opacity: 1;
+    --text-white-footer: #ffffff;
+}
 .section#footer {
     width: 100%;
     margin: 0;
@@ -8,8 +11,8 @@
 .section-footer {
     display: grid;
     justify-content: center;
-    color: var(--color-text);
-    background: radial-gradient(circle,#0f151a 30%,#000 80%);
+    color: var(--text-white-footer);
+    background-color: rgb(22 24 29 / var(--tw-bg-opacity));
     padding-top: 30px;
 }
 
@@ -27,12 +30,12 @@
 }
 
 .social-link {
-    color: var(--color-text);
+    color: var(--text-white-footer);
     transition: color 0.3s ease;
 }
 
 .social-link:hover {
-    color: #535bf2;
+    color: #25ff87;
 }
 
 .footer-nav {
@@ -49,13 +52,13 @@
 }
 
 .footer-nav a {
-    color: var(--color-text);
+    color: var(--text-white-footer);
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .footer-nav a:hover {
-    color: #535bf2;
+    color: #25ff87;
 }
 
 .footer-copyright {

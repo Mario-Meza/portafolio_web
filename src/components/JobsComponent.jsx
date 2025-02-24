@@ -73,7 +73,7 @@ export const JobsComponent = () => {
                                             onClick={() => setActiveCompany(index)}
                                             className={`w-full text-left py-3 px-4 font-mono text-sm transition-all duration-200
                                             ${index === activeCompany 
-                                                ? 'text-indigo-400-300 border-l-2 text-violet-400 -ml-[2px] bg-slate-800/50' 
+                                                ? 'text-indigo-400-300 border-l-2 text-cyan-400 -ml-[2px] bg-slate-800/50' 
                                                 : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800'}`}
                                         >
                                             {job.company}
@@ -85,7 +85,7 @@ export const JobsComponent = () => {
                                 <div className="flex-1">
                                     <h3 className="text-2xl text-slate-200 mb-1">
                                         {jobs[activeCompany].title}{' '}
-                                        <span className="text-indigo-400">@ {jobs[activeCompany].company}</span>
+                                        <span className="text-cyan-400">@ {jobs[activeCompany].company}</span>
                                     </h3>
                                     <p className="text-slate-400 font-mono mb-8">{jobs[activeCompany].period}</p>
 

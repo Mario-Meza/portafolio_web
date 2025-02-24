@@ -27,7 +27,7 @@ export const MenuComponent = () => {
                                 {navLinks.map((item, index) => (
                                     <li key={index} className="flex items-center">
                                         <a href={item.path}
-                                           className={`text-gray-200 accent-gray-400 hover:text-indigo-300 dark:hover:text-indigo-300 ${activeSection === item.path.replace('#', '') ? 'text-indigo-300 dark:text-indigo-400 font-medium' : ''}`}>
+                                           className={`text-gray-200 accent-gray-400 hover:text-green-300 dark:hover:text-green-300 ${activeSection === item.path.replace('#', '') ? 'text-indigo-300 dark:text-green-300 font-medium' : ''}`}>
                                             {item.name}
                                         </a>
                                     </li>

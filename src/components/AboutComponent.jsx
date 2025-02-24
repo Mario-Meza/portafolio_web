@@ -44,24 +44,24 @@ export const AboutComponent = () => {
 
                                 <p>
                                     Fast-forward to today, and I've had the privilege of working at{' '}
-                                    <a href="#" className="text-violet-400 hover:underline">
+                                    <a href="#" className="text-cyan-500 hover:underline">
                                         an advertising agency
                                     </a>
                                     ,{' '}
-                                    <a href="#" className="text-violet-400 hover:underline">
+                                    <a href="#" className="text-cyan-500 hover:underline">
                                         a start-up
                                     </a>
                                     ,{' '}
-                                    <a href="#" className="text-violet-400 hover:underline">
+                                    <a href="#" className="text-cyan-500 hover:underline">
                                         a huge corporation
                                     </a>
                                     , and{' '}
-                                    <a href="#" className="text-violet-400 hover:underline">
+                                    <a href="#" className="text-cyan-500 hover:underline">
                                         a student-led design studio
                                     </a>
                                     . My main focus these days is building accessible, inclusive products
                                     and digital experiences at{' '}
-                                    <a href="#" className="text-violet-400 hover:underline">
+                                    <a href="#" className="text-cyan-500 hover:underline">
                                         Upstatement
                                     </a>{' '}
                                     for a variety of clients.
@@ -69,7 +69,7 @@ export const AboutComponent = () => {
 
                                 <p>
                                     I also recently{' '}
-                                    <a href="#" className="text-violet-400 hover:underline">
+                                    <a href="#" className="text-cyan-500 hover:underline">
                                         launched a course
                                     </a>{' '}
                                     that covers everything you need to build a web app with the Spotify
@@ -85,7 +85,7 @@ export const AboutComponent = () => {
                             <div className="relative">
                                 <div className="relative group">
                                     {/* Image wrapper with border effect */}
-                                    <div className="absolute -right-4 -bottom-4 w-full h-full border-2 text-violet-400 rounded transition-transform duration-200 group-hover:-translate-x-1 group-hover:translate-y-1"></div>
+                                    <div className="absolute -right-4 -bottom-4 w-full h-full border-2 text-cyan-500 rounded transition-transform duration-200 group-hover:-translate-x-1 group-hover:translate-y-1"></div>
 
                                     {/* Image container */}
                                     <div className="relative rounded overflow-hidden bg-emerald-400/20 filter">

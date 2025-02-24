@@ -1,12 +1,22 @@
+@import "tailwindcss";
+
+:root{
+    --tw-bg-opacity: 1;
+    --text-white-about: #ffffff;
+}
+html.dark{
+    color-scheme: dark;
+}
+
 .section-about {
     display: grid;
     justify-content: center;
-    background: #0C1115FF;
+    background-color: rgb(22 24 29 / var(--tw-bg-opacity));
     padding: 50px;
 }
 
 .section-about h2 {
     font-size: 2rem;
-    color: white;
+    color: var(--text-white-about);
     margin-bottom: 1rem;
 }
