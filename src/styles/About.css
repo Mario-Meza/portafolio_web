@@ -7,6 +7,9 @@
 html.dark{
     color-scheme: dark;
 }
+.no-data {
+    margin: 30px;
+}
 
 .section-about {
     display: grid;

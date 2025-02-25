@@ -1,26 +1,28 @@
+import { useTechnologies } from '../hooks/useTechnologies'
 import profileImage from '../public/images/about.jpg';
+
 import React from 'react';
 
 export const AboutComponent = () => {
+    const { technologies } = useTechnologies();
+
     const TechList = ({ items }) => (
         <div className="grid grid-cols-2 gap-x-4 gap-y-2 mt-4">
-            {items.map((item, index) => (
-                <div key={index} className="flex items-center">
-                    <span className="text-green-400 mr-2">▹</span>
-                    <span className="font-mono text-slate-400">{item}</span>
-                </div>
-            ))}
+            {items && items.length  > 0 ? (
+                items.map((item, index) => (
+                    <div key={index} className="flex items-center">
+                        <span className="text-green-400 mr-2">▹</span>
+                        <span className="font-mono text-slate-400">{item}</span>
+                    </div>
+                ))
+            ) :(
+            <div className="no-data col-span-2 p-4 rounded bg-slate-800 text-slate-300 font-mono">
+                <span className="text-yellow-400">ⓘ</span>
+                No hay tecnologias disponibles en este momento
+            </div>
+                )}
         </div>
     );
-
-    const technologies = [
-        'JavaScript (ES6+)',
-        'TypeScript',
-        'React',
-        'Eleventy',
-        'Node.js',
-        'WordPress'
-    ];
 
     return (
         <section id="about" className="section-about">
