@@ -2,7 +2,6 @@
 :root {
     --tw-bg-opacity: 1;
     --tw-text-opacity: 1;
-    --text-white-projects: #ffffff;
 }
 html {
     scroll-behavior: smooth;
@@ -26,7 +25,7 @@ html {
     margin-bottom: 1rem;
     font-size: 2rem;
     font-weight: bold;
-    color: var(--text-white-projects);
+    color: var(--color-font-text);
 }
 
 .testimonial-grid {
@@ -34,7 +33,7 @@ html {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
     padding: 20px 0; /* Cambiado a solo padding vertical */
-    color: var(--text-white-projects);
+    color: var(--color-font-text);
 }
 
 .testimonial-card {

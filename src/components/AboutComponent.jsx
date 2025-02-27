@@ -1,5 +1,5 @@
 import { useTechnologies } from '../hooks/useTechnologies'
-import profileImage from '../public/images/about.jpg';
+import profileImage from '../assets/images/about.jpg';
 
 import React from 'react';
 

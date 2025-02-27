@@ -18,14 +18,11 @@ html {
 
 .header {
     /*border: 2px solid #535bf2;*/
-
     position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
     background: rgb(35 39 47 / var(--tw-bg-opacity));
     z-index: 1000;
-    padding: 1rem 2rem;
+    padding: 1rem;
 }
 
 .nav-container {
@@ -37,10 +34,7 @@ html {
 }
 .section{
     /*border: 1px solid rgba(168, 168, 168, 0.45);*/
-    min-height: 20vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Centra verticalmente el contenido */
+    min-height: 15vh;
 }
 .logo-section {
     display: flex;
@@ -95,14 +89,14 @@ html {
     max-width: 800px;
     margin: 0 auto;
     padding: 0 2rem;
-    color: var(--text-white-menu);
+    color: var(--color-font-text);
 
 }
 .hero-container{
     margin: 8px auto;
 }
 .hero-return{
-    color: #ffffff;
+    color: var(--color-font-text);
     font-weight: bold;
     text-align: start;
     text-shadow: 0 0 10px rgb(255, 255, 255), 0 0 20px rgb(255, 255, 255), 0 0 40px rgb(255, 255, 255), 0 0 80px rgb(255, 255, 255), 0 0 90px rgba(38,104,127,1), 0 0 100px rgba(38,104,127,1), 0 0 140px rgba(38,104,127,1)
@@ -116,7 +110,7 @@ html {
     font-size: 3.5rem;
     margin-bottom: 1rem;
     font-family: "Apple Symbols", serif;
-    color: var(--text-white-menu);
+    color: var(--color-font-text);
 }
 
 @media (max-width: 768px) {
@@ -129,7 +123,7 @@ html {
         font-size: 2rem;
     }
     .section {
-        padding-top: 140px; /* Aumentado para móviles debido al header más alto */
+        padding-top: 100px; /* Aumentado para móviles debido al header más alto */
     }
 }
 @media (min-width: 378px) {

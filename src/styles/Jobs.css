@@ -1,7 +1,6 @@
 @import "tailwindcss";
 :root {
     --tw-bg-opacity: 1;
-    --text-white-jobs: #ffffff;
 }
 
 html {
@@ -48,5 +47,5 @@ html {
 .section h2,h3{
     font-size: 1.5rem;
     margin-bottom: 20px;
-    color: var(--text-white-jobs);
+    color: var(--color-font-text);
 }
