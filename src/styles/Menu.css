@@ -18,8 +18,8 @@ html {
 
 .header {
     /*border: 2px solid #535bf2;*/
-    position: fixed;
-    width: 100%;
+
+
     background: rgb(35 39 47 / var(--tw-bg-opacity));
     z-index: 1000;
     padding: 1rem;
@@ -32,10 +32,7 @@ html {
     justify-content: space-between;
     align-items: center;
 }
-.section{
-    /*border: 1px solid rgba(168, 168, 168, 0.45);*/
-    min-height: 15vh;
-}
+
 .logo-section {
     display: flex;
     align-items: center;

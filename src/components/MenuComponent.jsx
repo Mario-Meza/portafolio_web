@@ -15,7 +15,7 @@ export const MenuComponent = () => {
     };
 
     return (
-            <section id="home" className="section transition-colors duration-300">
+
                 <header className="header transition-colors duration-300">
                     <div className="nav-container">
                         <div className="logo-section">
@@ -51,6 +51,6 @@ export const MenuComponent = () => {
                             </div>
                     </div>
                 </header>
-            </section>
+
     );
 };
