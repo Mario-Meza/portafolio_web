@@ -43,7 +43,11 @@ export const JobsComponent = () => {
     return (
         <section id="experience" className="section-jobs">
             <div className="flex-item">
-                <h2 className="text-4xl text-slate-200 font-semibold">Where I&apos;ve Worked</h2>
+                <h2 className="text-slate-200 font-semibold">
+                    <span className="text-gradient-primary">{'{ '}</span>
+                        Where I&apos;ve Worked
+                    <span className="text-gradient-primary">{' }'}</span>
+                </h2>
             </div>
             <div className="flex-1 ml-4 h-px bg-slate-600"></div>
             <div className="max-h-screen">

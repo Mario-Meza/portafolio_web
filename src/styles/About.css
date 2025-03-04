@@ -4,12 +4,11 @@
 }
 
 :root{
-    --tw-bg-opacity: 1;
+    --tw-bg-opacity: 15;
     --text-white-about: #ffffff;
+    --tw-traslate-y: 0;
 }
-html.dark{
-    color-scheme: dark;
-}
+
 .no-data {
     margin: 30px;
 }
@@ -17,16 +16,30 @@ html.dark{
 .section-about {
     display: grid;
     justify-content: center;
-    background-color: rgb(22 24 29 / var(--tw-bg-opacity));
+    background-color: #140026;
     padding: 50px;
-
+    position: relative;
+    background-image:
+        radial-gradient(circle, rgba(255, 255, 255, 0.7) 0%, rgba(30, 30, 30, 0) 70%),
+        url("../assets/images/grid.svg");
+    background-position: center;
+    background-repeat: repeat;
+    background-blend-mode: soft-light;
 }
+
+
+
+
 .section-about div {
     color: var(--color-font-text);
 }
+
 
 .section-about h2 {
     font-size: 2rem;
     color: var(--text-white-about);
     margin-bottom: 1rem;
+}
+.-translate-y-1\/2 {
+    t--tw-translate-y: -50%;
 }

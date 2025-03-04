@@ -1,5 +1,7 @@
 import { useTechnologies } from '../hooks/useTechnologies'
 import profileImage from '../assets/images/about.jpg';
+import gridImage from '../assets/images/grid.svg';
+
 
 import React from 'react';
 
@@ -30,7 +32,11 @@ export const AboutComponent = () => {
                 <div className="max-h-screen">
                     <div className="max-w-5xl mx-auto">
                         <div className="profile flex items-center gap-4">
-                            <h2 className="text-slate-200 font-semibold">About Me</h2>
+                            <h2 className="text-slate-200 font-semibold">
+                                <span className="text-gradient-primary">{'{ '}</span>
+                                About me
+                                <span className="text-gradient-primary">{' }'}</span>
+                            </h2>
                         </div>
                         {/* Content Grid */}
                         <div className="grid grid-cols-3 gap-12">
@@ -80,20 +86,23 @@ export const AboutComponent = () => {
 
                                 <p>Here are a few technologies I've been working with recently:</p>
 
-                                <TechList items={technologies} />
+                                <TechList items={technologies}/>
                             </div>
 
                             {/* Image - 1 column */}
                             <div className="relative">
                                 <div className="relative group">
                                     {/* Image wrapper with border effect */}
-                                    <div className="absolute -right-4 -bottom-4 w-full h-full border-2 text-cyan-500 rounded transition-transform duration-200 group-hover:-translate-x-1 group-hover:translate-y-1"></div>
+                                    <div
+                                        className="absolute -right-4 -bottom-4 w-full h-full border-2 text-cyan-500 rounded transition-transform duration-200 group-hover:-translate-x-1 group-hover:translate-y-1"></div>
 
                                     {/* Image container */}
                                     <div className="relative rounded overflow-hidden bg-emerald-400/20 filter">
-                                        <img src={profileImage} alt="Profile" className="w-full h-full object-cover transition-all duration-300" />
+                                        <img src={profileImage} alt="Profile"
+                                             className="w-full h-full object-cover transition-all duration-300"/>
                                     </div>
-                                    <div className="absolute inset-0 bg-green-400/70 mix-blend-multiply group-hover:opacity-0 transition-opacity duration-300"></div>
+                                    <div
+                                        className="absolute inset-0 bg-green-400/70 mix-blend-multiply group-hover:opacity-0 transition-opacity duration-300"></div>
                                 </div>
                             </div>
                         </div>

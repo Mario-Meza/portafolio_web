@@ -1,4 +1,11 @@
 @import "tailwindcss";
 :root {
     --color-font-text: #ffffff;
+    --gradient-primary: #fc88b2, #9d589a, #574c90;
+}
+
+.text-gradient-primary {
+    background-image: linear-gradient(45deg, var(--gradient-primary));
+    background-clip: text;
+    color: transparent;
 }

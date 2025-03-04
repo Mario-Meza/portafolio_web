@@ -1,4 +1,5 @@
 import { useReviews } from '../hooks/useReviews';
+import React from "react";
 
 const TestimonialCard = ({review}) => (
     <div className="testimonial-card">
@@ -30,7 +31,12 @@ export const ProjectsComponent = () => {
     return (
         <section id="work" className="section-projects">
             <div className="testimonial-section">
-                <h2 className="section-title">Some Things I’ve Built</h2>
+                <h2 className="section-title">
+
+                    <span className="text-gradient-primary">{'{ '}</span>
+                        Some Things I’ve Built
+                    <span className="text-gradient-primary">{' }'}</span>
+                </h2>
                 <div className="testimonial-grid">
                     { reviews.map((review, index) => (
                         <TestimonialCard key={index} review={review} />
