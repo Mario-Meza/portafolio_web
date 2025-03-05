@@ -123,22 +123,5 @@ html {
         padding-top: 100px; /* Aumentado para móviles debido al header más alto */
     }
 }
-@media (min-width: 378px) {
-    .nav-container{
-        flex-direction: row;
-        gap: 1rem;
-    }
-}
-@media (min-width: 469px) {
-    .nav-container{
-        flex-direction: row;
-        gap: 1rem;
-    }
-}
-@media (min-width: 300px) {
-    .nav-container{
-        flex-direction: row;
-        gap: 1rem;
-    }
-}
+
 

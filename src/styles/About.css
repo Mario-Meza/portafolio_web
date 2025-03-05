@@ -26,10 +26,14 @@
     background-repeat: repeat;
     background-blend-mode: soft-light;
 }
+.section-about,
+.grid p {
+    font-family: __Fira_Code_74c79e, monospace;
+}
 
-
-
-
+.profile h2 {
+    font-family: __Fira_Code_74c79e, monospace;
+}
 .section-about div {
     color: var(--color-font-text);
 }

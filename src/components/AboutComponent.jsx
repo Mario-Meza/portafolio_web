@@ -1,6 +1,5 @@
 import { useTechnologies } from '../hooks/useTechnologies'
 import profileImage from '../assets/images/about.jpg';
-import gridImage from '../assets/images/grid.svg';
 
 
 import React from 'react';

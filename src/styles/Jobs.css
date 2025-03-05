@@ -13,39 +13,27 @@ html {
     box-sizing: border-box;
     font-family: system-ui, -apple-system, sans-serif;
 }
-.section-jobs {
+.section-jobs{
     display: grid;
     justify-content: center;
     background-color: rgb(22 24 29 / var(--tw-bg-opacity));
+    text-align: justify;
+}
+.container-jobs{
+    text-align: center;
+    font-size: 30px;
+    margin: 10px;
+}
+.container-jobs h2 {
+     font-family: __Fira_Code_74c79e, monospace;
+}
+.flex ul li span{
+    font-size: 14px;
+    font-family: __Fira_Code_74c79e, monospace;
 }
 
-.container {
-    text-align: justify;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-.flex-item{
-    display: grid;
-    justify-content: center;
-    margin-bottom: 1rem;
-}
-.flex-item h2 {
-    font-size: 2rem;
-    padding: 20px;
-}
-.flex-item span{
-    font-size: 23px;
-    font-weight: bold;
-}
 @media (min-width: 768px){
     .grid{
         grid-template-columns: repeat(3, 1fr);
     }
-}
-
-
-.section h2,h3{
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-    color: var(--color-font-text);
 }
