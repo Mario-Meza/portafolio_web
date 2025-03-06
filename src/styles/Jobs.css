@@ -16,7 +16,7 @@ html {
 .section-jobs{
     display: grid;
     justify-content: center;
-    background-color: rgb(22 24 29 / var(--tw-bg-opacity));
+    background-color: hsl(251.25deg 31.37% 20%);
     text-align: justify;
 }
 .container-jobs{

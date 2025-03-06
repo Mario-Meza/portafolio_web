@@ -7,7 +7,7 @@ export const MenuComponent = () => {
     const navLinks = [
         { name: 'About', path: '#about'},
         { name: 'Experience', path: '#experience'},
-        { name: 'Work', path: '#work'},
+        { name: 'Projects', path: '#project'},
         { name: 'Contact', path: '#contact'}
     ];
     const handleCodeChange = (event) => {

@@ -9,7 +9,7 @@ html {
 .section-projects {
     display: grid;
     justify-content: center;
-    background-color: rgb(22 24 29 / var(--tw-bg-opacity));
+    background-color: hsl(246deg 30.3% 12.94%);
     padding: 20px;
 }
 
@@ -37,11 +37,12 @@ html {
 }
 
 .testimonial-card {
-    /*border-radius: 12px;*/
+    border-radius: 15px;
     padding: 25px;
     /*box-shadow: 0 4px 15px rgb(40, 40, 40);*/
-    border: rgba(85, 234, 163, 0.37) 2px solid;
+    /*border: rgba(85, 234, 163, 0.37) 2px solid;*/
     transition: transform 0.3s ease;
+    background: #292343;
 
 }
 
@@ -53,6 +54,7 @@ html {
     align-items: center;
     margin-bottom: 20px;
 }
+
 
 .profile-image {
     width: 60px;
@@ -69,12 +71,13 @@ html {
 .profile-name {
     font-weight: 600;
     margin-bottom: 5px;
-
+    font-family: __Fira_Code_74c79e, monospace;
 }
 
 .profile-role {
     font-size: 0.9rem;
-    color: rgb(88 196 220 / var(--tw-text-opacity));
+    color: #ff89fb;
+    font-family: __Fira_Code_74c79e, monospace;
 }
 
 .quote-icon {
@@ -85,20 +88,31 @@ html {
 
 .testimonial-text {
     display: grid;
-    text-align: center;
     line-height: 1.6;
     font-size: 1rem;
     margin-bottom: 15px;
-
+    font-family: __Fira_Code_74c79e, monospace;
+    text-align: justify;
 }
 
 .project-name {
-    color: rgb(130 253 253 / var(--tw-text-opacity));
     font-size: 0.9rem;
     font-weight: 500;
+    font-family: __Fira_Code_74c79e, monospace;
+    background: #fc88b2;
+    border-radius: 8px;
+    color: white;
+    padding: 5px;
+    width: 30%;
+    text-align: center;
+    transition: transform 4s ease;
+
 }
 .project-name:hover {
-    text-decoration: underline ;
+    text-decoration: none;
+    background: #9d589a;
+
+
 }
 
 @media (max-width: 768px) {

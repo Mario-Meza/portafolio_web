@@ -85,7 +85,10 @@ export const AboutComponent = () => {
 
                                 <p>Here are a few technologies I've been working with recently:</p>
 
-                                <TechList items={technologies}/>
+                                <div className="technologies-container">
+                                    <TechList items={technologies}/>
+                                </div>
+
                             </div>
 
                             {/* Image - 1 column */}

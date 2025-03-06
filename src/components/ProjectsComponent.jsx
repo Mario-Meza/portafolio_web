@@ -14,10 +14,9 @@ const TestimonialCard = ({review}) => (
                 <p className="profile-role">{review.role}</p>
             </div>
         </div>
-        <div className="quote-icon">"</div>
         <p className="testimonial-text">{review.content}</p>
         <a href={"#"}>
-            <p className="project-name">Project: {review.project}</p>
+            <p className="project-name">{review.project}</p>
         </a>
     </div>
 );
@@ -29,10 +28,9 @@ export const ProjectsComponent = () => {
     if(error) return  <div>Error: {error}</div>
 
     return (
-        <section id="work" className="section-projects">
+        <section id="project" className="section-projects">
             <div className="testimonial-section">
                 <h2 className="section-title">
-
                     <span className="text-gradient-primary">{'{ '}</span>
                         Some Things I’ve Built
                     <span className="text-gradient-primary">{' }'}</span>

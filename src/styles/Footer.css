@@ -11,8 +11,16 @@
     display: grid;
     justify-content: center;
     color: var(--color-font-text);
-    background-color: rgb(22 24 29 / var(--tw-bg-opacity));
-    padding-top: 30px;
+
+    background-color: #140026;
+    padding: 50px;
+    position: relative;
+    background-image:
+        radial-gradient(circle, rgba(255, 255, 255, 0.7) 0%, rgba(30, 30, 30, 0) 70%),
+        url("../assets/images/grid.svg");
+    background-position: center;
+    background-repeat: repeat;
+    background-blend-mode: soft-light;
 }
 
 .footer-container {

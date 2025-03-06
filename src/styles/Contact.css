@@ -25,7 +25,7 @@ button{
 .section-contact {
     display: grid;
     justify-content: center;
-    background-color: rgb(22 24 29 / var(--tw-bg-opacity));
+    background-color: hsl(251.25deg 31.37% 20%);
     padding-top: 1rem;
 
 }

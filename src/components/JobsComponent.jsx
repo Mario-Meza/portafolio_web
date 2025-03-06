@@ -61,7 +61,7 @@ export const JobsComponent = () => {
                                     onClick={() => setActiveCompany(index)}
                                     className={`w-full text-left py-3 px-4 font-mono text-sm transition-all duration-200
                                     ${index === activeCompany 
-                                        ? 'text-indigo-400-300 border-l-2 text-cyan-400 -ml-[2px] bg-slate-800/50' 
+                                        ? 'text-indigo-400-300 border-l-2 text-violet-400 -ml-[2px] bg-slate-800/50' 
                                         : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800'}`}
                                 >
                                     {job.company}
