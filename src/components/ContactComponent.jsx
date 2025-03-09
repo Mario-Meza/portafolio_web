@@ -129,8 +129,7 @@ export const ContactComponent = () => {
               <button
                   type="submit"
                   disabled={submitStatus === 'sending'}
-                  className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-medium py-3 px-4 rounded-md hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-cyan-600 focus:ring-opacity-50 transition transform hover:-translate-y-1 shadow-lg disabled:opacity-70 flex justify-center items-center"
-                >
+                  className="submit-contact">
                   {submitStatus === 'sending' ? (
                     <>
                       <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">

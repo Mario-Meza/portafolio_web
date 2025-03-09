@@ -37,3 +37,10 @@ button{
     font-weight: bold;
     margin-bottom: 1rem;
 }
+.submit-contact {
+    background: #fc88b2;
+}
+.submit-contact:hover {
+    text-decoration: none;
+    background: #9d589a;
+}

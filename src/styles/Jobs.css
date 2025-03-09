@@ -18,11 +18,31 @@ html {
     justify-content: center;
     background-color: hsl(251.25deg 31.37% 20%);
     text-align: justify;
+    width: 100%;
+    height: auto;
+    overflow: visible;
+    padding: 20px;
 }
 .container-jobs{
     text-align: center;
     font-size: 30px;
     margin: 10px;
+}
+
+/* Añadir estilos responsivos */
+@media (max-width: 768px) {
+    .section-jobs {
+        padding: 10px 5px;
+    }
+    
+    .container-jobs {
+        font-size: 24px;
+        margin: 5px;
+    }
+    
+    .flex ul li span {
+        font-size: 13px;
+    }
 }
 .container-jobs h2 {
      font-family: __Fira_Code_74c79e, monospace;
@@ -31,6 +51,20 @@ html {
     font-size: 14px;
     font-family: __Fira_Code_74c79e, monospace;
 }
+.job-company {
+    color: #cc92ff;
+}
+.text-task {
+    font-weight: bold;
+    color: #cc92ff;
+}
+.x {
+    color: #cc92ff;
+}
+.job-period {
+    color: #cc92ff;
+}
+
 
 @media (min-width: 768px){
     .grid{

@@ -1,77 +1,36 @@
-import {useEffect, useState} from "react";
-
 export const useJobs = () => {
-    const [ error, setError ] = useState(null);
-    const [ loading, setLoading ] = useState(true)
-    const [ jobs, setJobs ] = useState([]);
-
-    useEffect(() => {
-        try {
             const listJobs = [
                 {
-                    company: 'Upstatement',
-                    title: 'Lead Engineer',
-                    period: 'May 2018 - Present',
+                    company: 'Staff IT',
+                    title: 'Custom Software Engineering',
+                    period: 'Feb 2019 - August 2021',
                     responsibilities: [
-                        'Deliver high-quality, robust production code for a diverse array of projects for clients including Harvard Business School, Everytown for Gun Safety, Pratt Institute, Koala Health, Vanderbilt University, The 19th News, and more',
-                        'Work alongside creative directors to lead the research, development, and architecture of technical solutions to fulfill business requirements',
-                        'Collaborate with designers, project managers, and other engineers to transform creative concepts into production realities for clients and stakeholders',
-                        'Provide leadership within engineering department through close collaboration, knowledge shares, and mentorship'
+                        'Gracias al premio de un hackathon en 2018, pude realizar mi pasantía de la universidad en la empresa de Staff IT',
+                        'como outsourcing prestando mis servicios en Accenture México donde mis tareas fueron integrar funcionalidades a demos existentes',
+                        'Mis tareas fueron implementar nuevas funcionalidades a demos exitentes, además de realizar pruebas de usabilidad',
+                        'Las tecnologias que utilice fueron JavaScript, Ionic, Unity, C#, MQTT, Python, Computer Vision y Docker.'
                     ]
                 },
                 {
-                    company: 'Apple',
-                    title: 'Software Engineer',
-                    period: 'July 2017 - May 2018',
+                    company: 'Accenture México',
+                    title: 'Application Development',
+                    period: 'August 2021 - February 2025',
                     responsibilities: [
-                        'Developed and shipped highly interactive web applications for Apple Music',
-                        'Built and shipped the Apple Music Extension within Facebook Messenger',
-                        'Architected and implemented the user interface of CustomerHub'
-                    ]
-                },
-                {
-                    company: 'Scout Studio',
-                    title: 'Studio Developer',
-                    period: 'January 2017 - July 2017',
-                    responsibilities: [
-                        'Collaborated with designers and clients to deliver high-quality websites',
-                        'Implemented responsive designs and ensured cross-browser compatibility',
-                        'Managed multiple project deadlines and communicated with stakeholders'
-                    ]
-                },
-                {
-                    company: 'Starry',
-                    title: 'Software Engineer',
-                    period: 'October 2016 - January 2017',
-                    responsibilities: [
-                        'Engineered and maintained major features of customer-facing web app',
-                        'Proposed and implemented scalable solutions to issues identified with cloud services',
-                        'Interfaced with user experience designers and other developers'
-                    ]
-                },
-                {
-                    company: 'MullenLowe',
-                    title: 'Creative Technologist',
-                    period: 'July 2015 - September 2016',
-                    responsibilities: [
-                        'Developed and maintained code for in-house and client websites',
-                        'Tested sites in various browsers and devices to ensure cross-browser compatibility',
-                        'Clients included JetBlue, Lovesac, U.S. Cellular, U.S. Department of Defense'
+                        'Mi experiencia en Accenture me permitio trabajar en proyectos multidiciplinarios para diversos sectores, combinando habilidades tecnicas y creatividad para desarrollar',
+                        'interfaces que mejoran la experiencia de usuario.',
+                        'Tuve la oportunidad de colaborar con distintos equipos de trabajo, como diseñadores, desarrolladores y clientes, para crear soluciones de software de alta calidad.',
+                        'Los proyectos en los que participe al principio fueron apegados a realidad viertual, realidad aumentada.',
+                        'Mas tarde cuando entro ChattGPT, puede trabajar en diversas demos, desarrollando pruebas de concpeto para clientes apegados a Marketing e instituciones bancarias.',
+                        'Estas demos fueron enfocadas en ayudar a los clientes mediante chatbots, agentes virtuales',
+                        'Las tecnologias que utilizamos para el desarrollo de los bots y agentes virtuales, en cuanto a uso de APIS fue, la API de Whatsapp y Azure Open AI. En caunto a herramientas de Azure (Azure Container(Docker), Storage Account, AI Search, App Services con Azure DevOps',
+                        'Todo esto en conjunto con Python, FastAPI y langChain par alograr el desarrollo.'
                     ]
                 }
             ];
-            setJobs(listJobs);
-            setLoading(false);
 
-        }catch (err){
-            setError('Error al cargar la lista de trabajos');
-            setLoading(false);
-        }
-    }, []);
+ 
 
     return {
-        jobs,
-        error,
-        loading
+        jobs: listJobs
     }
 }

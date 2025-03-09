@@ -5,14 +5,15 @@ import profileImage from '../assets/images/about.jpg';
 import React from 'react';
 
 export const AboutComponent = () => {
-    const { technologies } = useTechnologies();
+    const { toolsWeb } = useTechnologies();
+    const { toolsIA } = useTechnologies();
 
     const TechList = ({ items }) => (
         <div className="grid grid-cols-2 gap-x-4 gap-y-2 mt-4">
             {items && items.length  > 0 ? (
                 items.map((item, index) => (
                     <div key={index} className="flex items-center">
-                        <span className="text-green-400 mr-2">▹</span>
+                        <span className="text-pink-400 mr-2">▹</span>
                         <span className="font-mono text-slate-400">{item}</span>
                     </div>
                 ))
@@ -42,51 +43,18 @@ export const AboutComponent = () => {
                             {/* Text Content - 2 columns */}
                             <div className="col-span-2 text-slate-400 space-y-4">
                                 <p>
-                                    Hello! My name is Brittany and I enjoy creating things that live on
-                                    the internet. My interest in web development started back in 2012
-                                    when I decided to try editing custom Tumblr themes — turns out
-                                    hacking together a custom reblog button taught me a lot about
-                                    HTML & CSS!
+                                    Hola mi nombre es Mario y disfruto creando cosas que viven en internet.
+                                    Mi interes esta enfocado en JavaScript, Python y React. 
+                                    He contribuido en el desarrollo de aplicaciones, 
+                                    chatbots, agentes virtuales con Gen AI y experiencias en realidad virtual durante la pandemia del 2020.
+                                    Mi interes por la tecnologia siempre ha sido el motivo de aprender mas sobre el desarrollo web y la programacion.
                                 </p>
-
-                                <p>
-                                    Fast-forward to today, and I've had the privilege of working at{' '}
-                                    <a href="#" className="text-cyan-500 hover:underline">
-                                        an advertising agency
-                                    </a>
-                                    ,{' '}
-                                    <a href="#" className="text-cyan-500 hover:underline">
-                                        a start-up
-                                    </a>
-                                    ,{' '}
-                                    <a href="#" className="text-cyan-500 hover:underline">
-                                        a huge corporation
-                                    </a>
-                                    , and{' '}
-                                    <a href="#" className="text-cyan-500 hover:underline">
-                                        a student-led design studio
-                                    </a>
-                                    . My main focus these days is building accessible, inclusive products
-                                    and digital experiences at{' '}
-                                    <a href="#" className="text-cyan-500 hover:underline">
-                                        Upstatement
-                                    </a>{' '}
-                                    for a variety of clients.
-                                </p>
-
-                                <p>
-                                    I also recently{' '}
-                                    <a href="#" className="text-cyan-500 hover:underline">
-                                        launched a course
-                                    </a>{' '}
-                                    that covers everything you need to build a web app with the Spotify
-                                    API using Node & React.
-                                </p>
-
                                 <p>Here are a few technologies I've been working with recently:</p>
-
-                                <div className="technologies-container">
-                                    <TechList items={technologies}/>
+                                <div>
+                                    <TechList items={toolsWeb}/>
+                                </div>
+                                <div>
+                                    <TechList items={toolsIA}/>
                                 </div>
 
                             </div>
