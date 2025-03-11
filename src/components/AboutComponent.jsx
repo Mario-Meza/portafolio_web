@@ -27,53 +27,50 @@ export const AboutComponent = () => {
     );
 
     return (
-        <section id="about" className="section-about">
+        <section id="about" className="section-about mb-16 md:mb-24">
             <div className="container">
-                <div className="max-h-screen">
-                    <div className="max-w-5xl mx-auto">
-                        <div className="profile flex items-center gap-4">
-                            <h2 className="text-slate-200 font-semibold">
-                                <span className="text-gradient-primary">{'{ '}</span>
-                                About me
-                                <span className="text-gradient-primary">{' }'}</span>
-                            </h2>
-                        </div>
-                        {/* Content Grid */}
-                        <div className="grid grid-cols-3 gap-12">
-                            {/* Text Content - 2 columns */}
-                            <div className="col-span-2 text-slate-400 space-y-4">
-                                <p>
-                                    Hola mi nombre es Mario y disfruto creando cosas que viven en internet.
-                                    Mi interes esta enfocado en JavaScript, Python y React. 
-                                    He contribuido en el desarrollo de aplicaciones, 
-                                    chatbots, agentes virtuales con Gen AI y experiencias en realidad virtual durante la pandemia del 2020.
-                                    Mi interes por la tecnologia siempre ha sido el motivo de aprender mas sobre el desarrollo web y la programacion.
-                                </p>
-                                <p>Here are a few technologies I've been working with recently:</p>
-                                <div>
-                                    <TechList items={toolsWeb}/>
-                                </div>
-                                <div>
-                                    <TechList items={toolsIA}/>
-                                </div>
-
+                <div className="max-w-5xl mx-auto">
+                    <div className="profile flex items-center gap-4">
+                        <h2 className="text-slate-200 font-semibold">
+                            <span className="text-gradient-primary">{'{ '}</span>
+                            About me
+                            <span className="text-gradient-primary">{' }'}</span>
+                        </h2>
+                    </div>
+                    {/* Content Grid */}
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+                        {/* Text Content - 2 columns */}
+                        <div className="md:col-span-2 text-slate-400 space-y-4">
+                            <p>
+                                Hola mi nombre es Mario y disfruto creando cosas que viven en internet.
+                                Mi interes esta enfocado en JavaScript, Python y React. 
+                                He contribuido en el desarrollo de aplicaciones, 
+                                chatbots, agentes virtuales con Gen AI y experiencias en realidad virtual durante la pandemia del 2020.
+                                Mi interes por la tecnologia siempre ha sido el motivo de aprender mas sobre el desarrollo web y la programacion.
+                            </p>
+                            <p>Here are a few technologies I've been working with recently:</p>
+                            <div>
+                                <TechList items={toolsWeb}/>
                             </div>
+                            <div>
+                                <TechList items={toolsIA}/>
+                            </div>
+                        </div>
 
-                            {/* Image - 1 column */}
-                            <div className="relative">
-                                <div className="relative group">
-                                    {/* Image wrapper with border effect */}
-                                    <div
-                                        className="absolute -right-4 -bottom-4 w-full h-full border-2 text-cyan-500 rounded transition-transform duration-200 group-hover:-translate-x-1 group-hover:translate-y-1"></div>
+                        {/* Image - 1 column */}
+                        <div className="relative">
+                            <div className="relative group">
+                                {/* Image wrapper with border effect */}
+                                <div
+                                    className="absolute -right-4 -bottom-4 w-full h-full border-2 text-cyan-500 rounded transition-transform duration-200 group-hover:-translate-x-1 group-hover:translate-y-1"></div>
 
-                                    {/* Image container */}
-                                    <div className="relative rounded overflow-hidden bg-emerald-400/20 filter">
-                                        <img src={profileImage} alt="Profile"
-                                             className="w-full h-full object-cover transition-all duration-300"/>
-                                    </div>
-                                    <div
-                                        className="absolute inset-0 bg-green-400/70 mix-blend-multiply group-hover:opacity-0 transition-opacity duration-300"></div>
+                                {/* Image container */}
+                                <div className="relative rounded overflow-hidden bg-emerald-400/20 filter">
+                                    <img src={profileImage} alt="Profile"
+                                         className="w-full h-full object-cover transition-all duration-300"/>
                                 </div>
+                                <div
+                                    className="absolute inset-0 bg-green-400/70 mix-blend-multiply group-hover:opacity-0 transition-opacity duration-300"></div>
                             </div>
                         </div>
                     </div>

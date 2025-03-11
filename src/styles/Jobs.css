@@ -21,18 +21,28 @@ html {
     width: 100%;
     height: auto;
     overflow: visible;
-    padding: 20px;
-}
-.container-jobs{
-    text-align: center;
-    font-size: 30px;
-    margin: 10px;
+    padding: 15px 10px 30px;
+    position: relative;
+    z-index: 1;/* Aumentado el espacio entre secciones */
 }
 
 /* Añadir estilos responsivos */
 @media (max-width: 768px) {
     .section-jobs {
-        padding: 10px 5px;
+        padding: 10px 5px 30px; /* Aumentado el padding inferior */
+        
+    }
+}
+.container-jobs{
+    text-align: center;
+    font-size: 30px;
+    
+}
+
+/* Añadir estilos responsivos */
+@media (max-width: 768px) {
+    .section-jobs {
+        padding: 10px 5px 20px;
     }
     
     .container-jobs {
@@ -42,6 +52,23 @@ html {
     
     .flex ul li span {
         font-size: 13px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .section-jobs {
+        padding: 15px 20px 30px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .section-jobs {
+        padding: 20px 30px 40px;
+    }
+    
+    .container-jobs {
+        font-size: 32px;
+        margin: 15px;
     }
 }
 .container-jobs h2 {
